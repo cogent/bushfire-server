@@ -1,2 +1,2 @@
 desc "The Build!"
-task :ci => [ 'db:migrate', :spec, :quality, :features ]
+task :ci => [ 'db:migrate', :spec, :quality, :cucumber ]
