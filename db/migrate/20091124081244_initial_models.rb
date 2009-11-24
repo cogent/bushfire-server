@@ -8,6 +8,7 @@ class InitialModels < ActiveRecord::Migration
     create_table :locations do |t|
       t.column "latitude", :decimal, :precision => 15, :scale => 10
       t.column "longitude", :decimal, :precision => 15, :scale => 10
+      t.integer :notifcation_radius, :null => false
       t.integer :device_id, :null => false, :on_delete => :cascade
       t.timestamps
     end
