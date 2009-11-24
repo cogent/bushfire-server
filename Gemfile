@@ -1,3 +1,5 @@
+source "http://gems.github.com"
+
 gem "rails", '2.3.2'
 gem 'ruby-pg', '0.7.9.2008.01.28'
 
@@ -9,6 +11,7 @@ only :test do
   gem 'flay',        '1.4.0'
   gem 'flog',        '2.2.0'
   gem 'roodi',       '2.0.1'
+  gem 'jscruggs-metric_fu', '1.1.5'
 end
 
 disable_system_gems
