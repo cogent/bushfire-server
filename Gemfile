@@ -1,4 +1,5 @@
 gem "rails", '2.3.2'
+gem 'ruby-pg', '0.7.9.2008.01.28'
 
 only :test do
   gem 'cucumber',    '0.4.4'

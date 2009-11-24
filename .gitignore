@@ -1,6 +1,5 @@
 log
 tmp
-db
 vendor/bundler_gems/gems
 vendor/bundler_gems/specifications
 vendor/bundler_gems/doc
