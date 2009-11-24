@@ -11,4 +11,19 @@
 
 ActiveRecord::Schema.define(:version => 20091124081244) do
 
+  create_table "devices", :force => true do |t|
+    t.string   "device_id"
+    t.string   "push_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", :force => true do |t|
+    t.decimal  "latitude",   :precision => 15, :scale => 10
+    t.decimal  "longitude",  :precision => 15, :scale => 10
+    t.integer  "device_id",                                  :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end
