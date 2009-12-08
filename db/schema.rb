@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091124081244) do
+ActiveRecord::Schema.define(:version => 20091208093537) do
 
   create_table "devices", :force => true do |t|
     t.string   "device_id"
@@ -18,11 +18,20 @@ ActiveRecord::Schema.define(:version => 20091124081244) do
     t.datetime "updated_at"
   end
 
+  create_table "incidents", :force => true do |t|
+    t.string   "status"
+    t.decimal  "latitude",   :precision => 15, :scale => 10
+    t.decimal  "longitude",  :precision => 15, :scale => 10
+    t.integer  "severity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "locations", :force => true do |t|
-    t.decimal  "latitude",           :precision => 15, :scale => 10
-    t.decimal  "longitude",          :precision => 15, :scale => 10
-    t.integer  "notifcation_radius",                                 :null => false
-    t.integer  "device_id",                                          :null => false
+    t.decimal  "latitude",            :precision => 15, :scale => 10
+    t.decimal  "longitude",           :precision => 15, :scale => 10
+    t.integer  "notification_radius",                                 :null => false
+    t.integer  "device_id",                                           :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

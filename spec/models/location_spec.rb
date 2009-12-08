@@ -16,7 +16,7 @@ describe Location do
 
     it "should default notification radius to 50" do
       @location.save
-      @location.notifcation_radius.should == 50
+      @location.notification_radius.should == 50
     end
   end
 
@@ -68,17 +68,17 @@ describe Location do
       end
     end
     
-    describe "notifcation_radius" do
+    describe "notification_radius" do
       it "should not accept a negative number" do
-        @location.notifcation_radius = -10
+        @location.notification_radius = -10
         @location.should_not be_valid
       end
       it "should not accept zero" do
-        @location.notifcation_radius = 0
+        @location.notification_radius = 0
         @location.should_not be_valid
       end
       it "should accept a valid number" do
-        @location.notifcation_radius = 10
+        @location.notification_radius = 10
         @location.should be_valid
       end
     end

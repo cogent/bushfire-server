@@ -5,11 +5,11 @@ class Location < ActiveRecord::Base
 
   validates_numericality_of :latitude, :greater_than => -90, :less_than_or_equal_to => 90
   validates_numericality_of :longitude, :greater_than => -180, :less_than_or_equal_to => 180
-  validates_numericality_of :notifcation_radius, :greater_than => 0
+  validates_numericality_of :notification_radius, :greater_than => 0
 
   private
     def apply_defaults
-      self.notifcation_radius ||= 50
+      self.notification_radius ||= 50
     end
 
 end
