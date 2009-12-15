@@ -41,6 +41,6 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 
-  map.connect '/register-locations', :controller => 'register_locations', :action => 'post', :conditions => { :method => :post }
+  map.connect '/register-locations', :controller => 'device', :action => 'register_locations', :conditions => { :method => :post }
 
 end
