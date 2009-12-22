@@ -1,7 +1,7 @@
 class DeviceController < ActionController::Base
 
   def register_locations
-    Device.create(params[:device])
+    Device.find_or_create_by_device_id(params[:device])
     render :nothing => true
   end
 
